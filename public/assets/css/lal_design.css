@@ -1,0 +1,125 @@
+body#login
+{
+	background: url(login_background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+body#signup
+{
+	background: url(login_background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h3#name
+{
+	font-family: 'Playfair Display', serif;
+	color: white;
+	font-size: 90px;
+	/*text-align: center;*/
+}
+
+#title_container{
+	margin-top: 50px;
+}
+#box{
+	/*width: 100%;*/
+	margin-top: 50px;
+	background-color: rgba(192, 192, 192 , 0.7);
+	border-radius: 25px;
+}
+
+.input_textbox{
+	margin-top: 30px;
+}
+
+button.submit_btn{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-left: 80%;
+	background: rgba(194,192,194,0.7);
+	-webkit-border-radius: 13;
+	-moz-border-radius: 13;
+	border-radius: 13px;
+	color: #ffffff;
+	/*padding: px 20px 3px 20px;*/
+	padding-left: 20px;
+	padding-right: 20px;
+	border: solid #ffffff 2px;
+	text-decoration: none;
+}
+
+button.submit_btn:hover ,#back_btn:hover{
+	background: #8f8c8f;
+	/*background-image: -webkit-linear-gradient(top, #8f8c8f, #8f8c8f);
+	background-image: -moz-linear-gradient(top, #8f8c8f, #8f8c8f);
+	background-image: -ms-linear-gradient(top, #8f8c8f, #8f8c8f);
+	background-image: -o-linear-gradient(top, #8f8c8f, #8f8c8f);
+	background-image: linear-gradient(to bottom, #8f8c8f, #8f8c8f);*/
+	text-decoration: none;
+}
+
+#back_btn
+{
+	margin-top: 20px;
+	background: rgba(194,192,194,0.7);
+	-webkit-border-radius: 13;
+	-moz-border-radius: 13;
+	border-radius: 13px;
+	color: #ffffff;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: solid #ffffff 2px;
+	text-decoration: none;
+}
+#top_quote{
+	font-family: 'Georgia', serif;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+#bottom_quote{
+	font-family: 'Georgia', serif;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+.resturants:hover{
+	cursor: pointer;
+}
+
+#resturant_picker{
+	margin-top: 20px;
+}
+
+.signup_error{
+	font-size: 5px;
+	font-weight: bolder;
+}
+
+div.login input[type="text"], div.login input[type="password"]
+{
+    width: 100%;
+    margin: 0;
+    padding: 5px 10px;*/
+	 margin-left: -56px;
+	 /*margin-right: 100px;*/
+    background: 0;
+    border: 0;
+    border-bottom: 1px solid #FFFFFF;
+    outline: 0;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+	 margin-top: 10px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    outline: 0;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Hello World</title>
+</head>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!-- <script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script> -->
+<link href="css/header.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<div class="wrapper">
+  <%- include sidebar.ejs %>
+  <div class="main-panel">
+    <%- include navbar.ejs %>
+      <div class="content">
+        <div class="container-fluid">
+        <div class="project-header">  
+          <div class="project-name-div">
+            <div id="page-title">Todo List</div>
+          </div>
+          <div class="tab-row">
+            <div class="tab">Tasks</div>
+            <div class="tab">Files</div>
+          </div>
+        </div>
+          <div id="tasks">
+          <% tasks.forEach(function(task){ %>
+             <div class="task" method="post">
+                <% if(task.value.completed=='true'){%>
+
+                <div>
+                <a class="icon icon-complete"><i class=""></i></a>
+                </div>
+
+                    <div class="task-div select-task" data-id="<%= task.key %>" data-sub="<%= task.value.task%>"
+                    action="/select-task">
+                      <div class="task-text completed">
+                        <%= task.value.task.task_text %>
+                      </div>
+                    </div>
+                <div>
+                <a href="#" class="icon icon-delete" data-id="<%= task.key %>" onclick="deleteTask(this);" action="/delete"><i class="nc-icon nc-simple-remove"></i></a>
+                </div>
+               <% }else{ %>
+
+               <div>
+               <a class="icon icon-complete"><i class="nc-icon nc-check-2"></i></a>
+               </div>
+
+                    <div class="task-div select-task" data-id="<%= task.key %>" action="/select-task">
+                      <div class="task-text">
+                        <%= task.value.task.task_text %>
+                      </div>
+                    </div>
+
+                <div>
+                <a href="#" class="icon icon-delete" data-id="<%= task.key %>" onclick="deleteTask(this);" action="/delete"><i class="nc-icon nc-simple-remove"></i></a>
+                </div>
+               <% } %>
+            
+
+            </div>
+            <div class="details" id="<%= task.key %>">
+
+            </div>
+            <%})%>
+          <div class="task">
+            <i class="nc-icon nc-simple-add" id="task-icon"></i>
+            <div class="task-div task-new">
+              <div class="task-text-new">
+              </div>
+              <form method="post" action="/add">
+                <input type="textarea" name="task" class="task-form input">
+              </form> 
+            </div>
+          </div> 
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+</html>
